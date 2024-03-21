@@ -3,20 +3,49 @@
 <head>
     <meta charset="utf-8" />
     <title>Consumir API Ajax</title>
+    <script src="js/codigo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div>
-        <label>GET all sin parametros</label>
+        <label>GET all sin parametros</label><br />
+        <label>Utiliza la funcion $.get(); de JQuery</label><br />
         <button type="button" id="btn_get_all" onclick="get_all();">Obtener Todo sin parametros</button>
     </div>
     <br /><br />
+          <div>
+              <label>GET 1 By id</label><br />
+              <label>Utiliza la funcion $.get(); de JQuery agregando el id directamente en la URL</label><br />
+              <label>id:</label>
+              <input type="text" id="get_1_id" />
+              <button type="button" id="btn_get_1" onclick="get_1_by_id();">Obtener</button>
+          </div>
+
+    <br /><br />
+
     <div>
-        <label>GET 1 By id</label>
-        <input type="text" id="get_1_id" />
-        <button type="button" id="btn_get_1" onclick="get_1_by_id();">Obtener</button>
+        <label>Insert</label><br />
+        <label>Utiliza la funcion $.ajax con Method = POST</label><br />
+        <label>Nombre</label><input type="text" id="txt_nombre"/>
+        <label>Correo</label><input type="text" id="txt_correo"/>
+        <button type="button" id="btn_insertar" onclick="insertar();">Insertar</button>
     </div>
-    <div></div>
-    <div></div>
+    <br /><br />
+    <div >
+        <label>Borrar by id</label><br />
+        <label>utiliza la funcion $.ajax con Method = DELETE</label>
+        <label>id</label><input type="text" id="txt_id_borrar"/>
+        <button type="button" id="btn_borrar" onclick="borrar_id();">Borrar</button>
+    </div>
+    <br /><br />
+          <div>
+              <label>Modificar by id</label><br />
+              <label>utiliza la funcion $.ajax de JQuery con method PUT</label><br />
+              <label>id</label><input type="text" id="txt_id_modificar" />
+              <label>Nombre</label><input type="text" id="txt_nombre_modificar" />
+              <label>Correo</label><input type="text" id="txt_correo_modificar" />
+              <button type="button" id="btn_borrar" onclick="modificar_id();">Modificar</button>
+          </div>
 
 </body>
 </html>
